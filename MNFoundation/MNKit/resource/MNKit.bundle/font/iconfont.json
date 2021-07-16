@@ -1,0 +1,58 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "832501",
+      "name": "更多",
+      "font_class": "gengduo",
+      "unicode": "e879",
+      "unicode_decimal": 59513
+    },
+    {
+      "icon_id": "851729",
+      "name": "刷新",
+      "font_class": "shuaxin",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "1471042",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e66f",
+      "unicode_decimal": 58991
+    },
+    {
+      "icon_id": "4770732",
+      "name": "关闭",
+      "font_class": "guanbi",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "8634398",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e516",
+      "unicode_decimal": 58646
+    },
+    {
+      "icon_id": "9148583",
+      "name": "分享",
+      "font_class": "fenxiang",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "11594385",
+      "name": "分享",
+      "font_class": "fenxiang1",
+      "unicode": "e6af",
+      "unicode_decimal": 59055
+    }
+  ]
+}
