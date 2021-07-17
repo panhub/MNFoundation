@@ -20,7 +20,12 @@ class ViewController: UIViewController {
         imageView.center = view.bounds_center
         imageView.image = UIImage.icon(unicode: MNIcon.Name.close, color: UIColor.red, pix: 100.0)
         view.addSubview(imageView)
-    
+        
+        let v = MNBaseViewController()
+        
+        if v.transitionStyle() == .modal {
+            let _ = true
+        }
     }
 }
 

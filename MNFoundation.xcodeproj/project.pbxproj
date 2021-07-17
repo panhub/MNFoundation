@@ -13,6 +13,8 @@
 		3B32637D269FD8BE00DBF540 /* MNKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B32637C269FD8BE00DBF540 /* MNKit.bundle */; };
 		3B326380269FD96D00DBF540 /* Bundle+MNHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B32637F269FD96D00DBF540 /* Bundle+MNHelper.swift */; };
 		3B326382269FDD9100DBF540 /* MNKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B326381269FDD9100DBF540 /* MNKit.swift */; };
+		3B3723E826A36ADE00EDA009 /* UIViewController+MNInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3723E726A36ADE00EDA009 /* UIViewController+MNInterface.swift */; };
+		3B80668026A3568900F69384 /* MNBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80667F26A3568900F69384 /* MNBaseViewController.swift */; };
 		3BA32E00269EC7C10042460D /* UIView+MNLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA32DFF269EC7C10042460D /* UIView+MNLayout.swift */; };
 		3BA32E02269EC7EA0042460D /* UIVisualEffectView+MNHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA32E01269EC7EA0042460D /* UIVisualEffectView+MNHelper.swift */; };
 		3BA32E04269EC9E90042460D /* UIView+MNHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA32E03269EC9E90042460D /* UIView+MNHelper.swift */; };
@@ -40,6 +42,8 @@
 		3B32637C269FD8BE00DBF540 /* MNKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MNKit.bundle; sourceTree = "<group>"; };
 		3B32637F269FD96D00DBF540 /* Bundle+MNHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+MNHelper.swift"; sourceTree = "<group>"; };
 		3B326381269FDD9100DBF540 /* MNKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNKit.swift; sourceTree = "<group>"; };
+		3B3723E726A36ADE00EDA009 /* UIViewController+MNInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+MNInterface.swift"; sourceTree = "<group>"; };
+		3B80667F26A3568900F69384 /* MNBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNBaseViewController.swift; sourceTree = "<group>"; };
 		3BA32DFF269EC7C10042460D /* UIView+MNLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+MNLayout.swift"; sourceTree = "<group>"; };
 		3BA32E01269EC7EA0042460D /* UIVisualEffectView+MNHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVisualEffectView+MNHelper.swift"; sourceTree = "<group>"; };
 		3BA32E03269EC9E90042460D /* UIView+MNHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+MNHelper.swift"; sourceTree = "<group>"; };
@@ -86,6 +90,15 @@
 			children = (
 			);
 			path = NSHelper;
+			sourceTree = "<group>";
+		};
+		3B80667E26A3565B00F69384 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				3B80667F26A3568900F69384 /* MNBaseViewController.swift */,
+				3B3723E726A36ADE00EDA009 /* UIViewController+MNInterface.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 		3BA32DFE269EC7C10042460D /* UIHelper */ = {
@@ -180,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				3BDCF2AC269E924100587302 /* view */,
-				3BDCF2AD269E924100587302 /* controller */,
+				3B80667E26A3565B00F69384 /* controller */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -192,13 +205,6 @@
 				3BDCF2B0269E951100587302 /* MNNavigationBar.swift */,
 			);
 			path = view;
-			sourceTree = "<group>";
-		};
-		3BDCF2AD269E924100587302 /* controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +279,7 @@
 			files = (
 				3BA32E06269ECDBB0042460D /* MNConst.swift in Sources */,
 				3BA32E00269EC7C10042460D /* UIView+MNLayout.swift in Sources */,
+				3B80668026A3568900F69384 /* MNBaseViewController.swift in Sources */,
 				3BA32E11269EE9660042460D /* MNSwizzle.swift in Sources */,
 				3BA32E04269EC9E90042460D /* UIView+MNHelper.swift in Sources */,
 				3BA32E0C269EE0C70042460D /* UINavigationBar+MNHelper.swift in Sources */,
@@ -280,6 +287,7 @@
 				3BDCF2AF269E92E700587302 /* MNNavBarTitleView.swift in Sources */,
 				3BA32E08269EDA040042460D /* UIFont+MNHelper.swift in Sources */,
 				3BDCF28C269E726F00587302 /* ViewController.swift in Sources */,
+				3B3723E826A36ADE00EDA009 /* UIViewController+MNInterface.swift in Sources */,
 				3BA32E0E269EE2100042460D /* UITabBar+MNHelper.swift in Sources */,
 				3BA32E02269EC7EA0042460D /* UIVisualEffectView+MNHelper.swift in Sources */,
 				3BDCF2A8269E8C8000587302 /* Double+MNHelper.swift in Sources */,
