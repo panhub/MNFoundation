@@ -22,6 +22,7 @@
 		3BA32E0C269EE0C70042460D /* UINavigationBar+MNHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA32E0B269EE0C70042460D /* UINavigationBar+MNHelper.swift */; };
 		3BA32E0E269EE2100042460D /* UITabBar+MNHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA32E0D269EE2100042460D /* UITabBar+MNHelper.swift */; };
 		3BA32E11269EE9660042460D /* MNSwizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA32E10269EE9660042460D /* MNSwizzle.swift */; };
+		3BCB13EE26A311CA00A10CFF /* CALayer+MNHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB13ED26A311CA00A10CFF /* CALayer+MNHelper.swift */; };
 		3BDCF288269E726F00587302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCF287269E726F00587302 /* AppDelegate.swift */; };
 		3BDCF28C269E726F00587302 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCF28B269E726F00587302 /* ViewController.swift */; };
 		3BDCF291269E727000587302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BDCF290269E727000587302 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		3BA32E0B269EE0C70042460D /* UINavigationBar+MNHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+MNHelper.swift"; sourceTree = "<group>"; };
 		3BA32E0D269EE2100042460D /* UITabBar+MNHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+MNHelper.swift"; sourceTree = "<group>"; };
 		3BA32E10269EE9660042460D /* MNSwizzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNSwizzle.swift; sourceTree = "<group>"; };
+		3BCB13ED26A311CA00A10CFF /* CALayer+MNHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+MNHelper.swift"; sourceTree = "<group>"; };
 		3BDCF284269E726F00587302 /* MNFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BDCF287269E726F00587302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BDCF28B269E726F00587302 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 			path = units;
 			sourceTree = "<group>";
 		};
+		3BCB13EC26A311AA00A10CFF /* CAHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3BCB13ED26A311CA00A10CFF /* CALayer+MNHelper.swift */,
+			);
+			path = CAHelper;
+			sourceTree = "<group>";
+		};
 		3BDCF27B269E726F00587302 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +170,7 @@
 				3B32637F269FD96D00DBF540 /* Bundle+MNHelper.swift */,
 				3B03006626A029DB00E527F0 /* String+MNHelper.swift */,
 				3B32637E269FD94400DBF540 /* NSHelper */,
+				3BCB13EC26A311AA00A10CFF /* CAHelper */,
 				3BA32DFE269EC7C10042460D /* UIHelper */,
 			);
 			path = helper;
@@ -279,6 +290,7 @@
 				3B326380269FD96D00DBF540 /* Bundle+MNHelper.swift in Sources */,
 				3B03006726A029DB00E527F0 /* String+MNHelper.swift in Sources */,
 				3BA32E0A269EDB7B0042460D /* UIApplication+MNHelper.swift in Sources */,
+				3BCB13EE26A311CA00A10CFF /* CALayer+MNHelper.swift in Sources */,
 				3B32637A269FD71900DBF540 /* UIImage+MNIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
