@@ -13,12 +13,12 @@ extension CALayer {
     // 背景图片
     var background: UIImage? {
         set (image) {
-            self.contents = image
+            self.contents = image?.cgImage
         }
         get {
-            if let image = self.contents as? UIImage {
-                return image
-            }
+//            if let contents = self.contents {
+//                return UIImage(cgImage: contents as CGImage)
+//            }
             return nil
         }
     }

@@ -3,7 +3,7 @@
 //  MNFoundation
 //
 //  Created by 冯盼 on 2021/7/18.
-//
+//  附带导航条的控制器基类
 
 import UIKit
 
@@ -14,7 +14,8 @@ class MNExtendViewController: MNBaseViewController {
     fileprivate var mn_navigationBar: MNNavigationBar!
     // 外界获取导航条
     override var navigationBar: MNNavigationBar! { mn_navigationBar }
-
+    
+    // 对内容视图约束
     override func initialized() {
         super.initialized()
         if isChildViewController() {
@@ -26,6 +27,15 @@ class MNExtendViewController: MNBaseViewController {
         }
     }
     
+    // 标题
+    override var title: String? {
+        set (newValue) {
+            super.title = newValue
+            if let bar = mn_navigationBar { bar.title = title }
+        }
+        get { super.title }
+    }
+    
     override func createView() {
         super.createView()
         if edges.contains(.top) {
@@ -35,7 +45,7 @@ class MNExtendViewController: MNBaseViewController {
             navigationBar.createItems()
             navigationBar.title = title
             view.addSubview(navigationBar)
-            self.mn_navigationBar = navigationBar
+            mn_navigationBar = navigationBar
         }
     }
     
@@ -77,8 +87,9 @@ extension MNExtendViewController: MNNavigationBarDelegate {
 }
 
 extension UIViewController {
+    // 为所有控制器添加导航条计算属性
     @objc var navigationBar: MNNavigationBar! {
-        if let viewController = self as? MNExtendViewController, let v = viewController.mn_navigationBar { return viewController.mn_navigationBar }
+        if let viewController = self.root as? MNExtendViewController, let bar = viewController.mn_navigationBar { return bar }
         return nil
     }
 }

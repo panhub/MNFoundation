@@ -3,14 +3,14 @@
 //  MNFoundation
 //
 //  Created by 冯盼 on 2021/7/18.
-//  控制器基类
+//  控制器基类(提供基础功能)
 
 import UIKit
 import Foundation
 
 class MNBaseViewController: UIViewController, UIViewControllerTransitioningDelegate {
     // 位置
-    var frame: CGRect = CGRect.zero
+    var frame: CGRect = UIScreen.main.bounds
     // 是否第一次显示
     var isFirstAppear: Bool = true
     // 是否需要刷新数据
@@ -68,7 +68,7 @@ class MNBaseViewController: UIViewController, UIViewControllerTransitioningDeleg
         let contentView = UIView(frame: frame)
         contentView.backgroundColor = UIColor.white
         contentView.isUserInteractionEnabled = true
-        self.view.addSubview(contentView)
+        view.addSubview(contentView)
         self.contentView = contentView
     }
     

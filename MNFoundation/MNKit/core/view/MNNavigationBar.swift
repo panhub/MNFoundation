@@ -25,7 +25,7 @@ import UIKit
 
 public class MNNavigationBar: UIView {
     // 定义左右按钮大小
-    static let ItemSize: CGSize = CGSize(width: 27.0, height: 27.0)
+    static let ItemSize: CGSize = CGSize(width: 20.0, height: 20.0)
     // 按钮间距
     static let ItemMargin: CGFloat = 13.0
     // 事件代理
@@ -59,8 +59,8 @@ public class MNNavigationBar: UIView {
             y += UIApplication.StatusBarHeight
             barItem.top_mn = y
             barItem.autoresizingMask = .flexibleTopMargin
-            self.leftBarItem = barItem
-            return barItem
+            mn_leftBarItem = barItem
+            return mn_leftBarItem
         }
     }
     // 右按钮
@@ -83,8 +83,8 @@ public class MNNavigationBar: UIView {
             barItem.top_mn = y
             barItem.right_mn = self.width_mn - MNNavigationBar.ItemMargin;
             barItem.autoresizingMask = .flexibleTopMargin
-            self.mn_rightBarItem = barItem
-            return barItem
+            mn_rightBarItem = barItem
+            return mn_rightBarItem
         }
     }
     // 标题视图
@@ -96,8 +96,8 @@ public class MNNavigationBar: UIView {
             let x = max(self.leftBarItem.right_mn, self.width_mn - self.rightBarItem.left_mn)
             let w = max(0.0, self.width_mn - x*2.0)
             let view = MNNavigationTitleView(frame: CGRect(x: x, y: MN_STATUS_BAR_HEIGHT, width: w, height: self.height_mn - MN_STATUS_BAR_HEIGHT))
-            self.mn_titleView = view
-            return view
+            mn_titleView = view
+            return mn_titleView
         }
     }
     // 底部分割线

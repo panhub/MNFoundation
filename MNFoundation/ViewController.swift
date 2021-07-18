@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: MNExtendViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,16 +17,9 @@ class ViewController: UIViewController {
         
         
         let imageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 28.0, height: 28.0))
-        imageView.center = view.bounds_center
+        imageView.center = contentView.bounds_center
         imageView.image = UIImage.icon(unicode: MNIcon.Name.close, color: UIColor.red, pix: 100.0)
-        view.addSubview(imageView)
-        
-        let v = MNExtendViewController()
-        let c = v.navigationBar
-        
-        if v.transitionStyle() == .modal {
-            let _ = true
-        }
+        contentView.addSubview(imageView)
     }
 }
 
