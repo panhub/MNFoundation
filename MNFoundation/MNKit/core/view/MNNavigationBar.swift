@@ -36,7 +36,7 @@ public class MNNavigationBar: UIView {
         return blurView
     }()
     // 左按钮
-    private var mn_leftBarItem: UIView?
+    private var mn_leftBarItem: UIView!
     var leftBarItem: UIView {
         set (newValue) {}
         get {
@@ -64,7 +64,7 @@ public class MNNavigationBar: UIView {
         }
     }
     // 右按钮
-    private var mn_rightBarItem: UIView?
+    private var mn_rightBarItem: UIView!
     var rightBarItem: UIView {
         set (newValue) {}
         get {
@@ -88,14 +88,14 @@ public class MNNavigationBar: UIView {
         }
     }
     // 标题视图
-    private var mn_titleView: MNNavBarTitleView?
-    var titleView: MNNavBarTitleView {
+    private var mn_titleView: MNNavigationTitleView!
+    var titleView: MNNavigationTitleView {
         set (newValue) {}
         get {
             if let view = self.mn_titleView { return view }
             let x = max(self.leftBarItem.right_mn, self.width_mn - self.rightBarItem.left_mn)
             let w = max(0.0, self.width_mn - x*2.0)
-            let view = MNNavBarTitleView(frame: CGRect(x: x, y: MN_STATUS_BAR_HEIGHT, width: w, height: self.height_mn - MN_STATUS_BAR_HEIGHT))
+            let view = MNNavigationTitleView(frame: CGRect(x: x, y: MN_STATUS_BAR_HEIGHT, width: w, height: self.height_mn - MN_STATUS_BAR_HEIGHT))
             self.mn_titleView = view
             return view
         }

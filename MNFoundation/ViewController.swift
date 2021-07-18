@@ -21,7 +21,8 @@ class ViewController: UIViewController {
         imageView.image = UIImage.icon(unicode: MNIcon.Name.close, color: UIColor.red, pix: 100.0)
         view.addSubview(imageView)
         
-        let v = MNBaseViewController()
+        let v = MNExtendViewController()
+        let c = v.navigationBar
         
         if v.transitionStyle() == .modal {
             let _ = true

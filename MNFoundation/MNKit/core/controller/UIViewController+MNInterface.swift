@@ -37,6 +37,17 @@ extension UIViewController: MNControllerInterface {
         static let all: Edge = [.top, .bottom]
     }
     
+    // 完整的控制器
+    var root: UIViewController? {
+        var viewController: UIViewController? = self
+        repeat {
+            if let vc = viewController, vc.isChildViewController() == false { return vc }
+            viewController = viewController?.parent
+        } while viewController != nil
+        return viewController
+    }
+    
+    // 实现协议
     func transitionStyle() -> TransitionStyle { .stack }
     func isRootViewController() -> Bool { false }
     func isChildViewController() -> Bool { false }

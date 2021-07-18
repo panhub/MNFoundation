@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MNNavBarTitleView: UIView {
+class MNNavigationTitleView: UIView {
     
     let titleLabel = UILabel()
     
@@ -15,9 +15,7 @@ class MNNavBarTitleView: UIView {
         set (text) {
             titleLabel.text = text
         }
-        get {
-            titleLabel.text
-        }
+        get { titleLabel.text }
     }
     
     override init(frame: CGRect) {

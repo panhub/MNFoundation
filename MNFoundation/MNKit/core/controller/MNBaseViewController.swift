@@ -33,9 +33,9 @@ class MNBaseViewController: UIViewController, UIViewControllerTransitioningDeleg
         self.initialized()
     }
     
-    convenience init(frame rect: CGRect) {
+    convenience init(_ frame: CGRect) {
         self.init()
-        self.frame = rect
+        self.frame = frame
         self.isChildController = true
         self.initialized()
     }
@@ -46,14 +46,10 @@ class MNBaseViewController: UIViewController, UIViewControllerTransitioningDeleg
     
     // 初始化自身属性
     func initialized() -> Void {
-        if self.isChildController || self.isChildViewController() {
-            self.edges = .none
-        } else {
-            self.edges = .bottom
+        if transitionStyle() == .modal {
+            transitioningDelegate = self
         }
-        if self.transitionStyle() == .modal {
-            self.transitioningDelegate = self
-        }
+        edges = (isChildViewController() || !isRootViewController()) ? .none : .bottom
     }
     
     override func loadView() {
@@ -66,7 +62,7 @@ class MNBaseViewController: UIViewController, UIViewControllerTransitioningDeleg
     
     func createView() -> Void {
         var frame = self.view.bounds
-        if self.edges.contains(.bottom) {
+        if edges.contains(.bottom) {
             frame = frame.inset(by: UIEdgeInsets(top: 0.0, left: 0.0, bottom: MN_TAB_BAR_HEIGHT, right: 0.0))
         }
         let contentView = UIView(frame: frame)
