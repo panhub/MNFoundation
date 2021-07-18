@@ -25,7 +25,7 @@ import UIKit
 
 public class MNNavigationBar: UIView {
     // 定义左右按钮大小
-    static let ItemSize: CGSize = CGSize(width: 20.0, height: 20.0)
+    static let ItemSize: CGFloat = 20.0
     // 按钮间距
     static let ItemMargin: CGFloat = 13.0
     // 事件代理
@@ -46,10 +46,10 @@ public class MNNavigationBar: UIView {
                 barItem = view
             } else {
                 barItem = UIControl()
-                barItem.size_mn = MNNavigationBar.ItemSize
+                barItem.size_mn = CGSize(width: MNNavigationBar.ItemSize, height: MNNavigationBar.ItemSize)
                 if let draw = self.delegate?.shouldDrawBackBarItem?(), draw == true {
                     // 返回按钮
-                    barItem.background = UIImage.icon(unicode: MNIcon.Name.back, color: UIColor.black, pix: MNNavigationBar.ItemSize.width)
+                    barItem.background = UIImage.icon(unicode: MNIcon.Name.back, color: UIColor.black, pix: MNNavigationBar.ItemSize)
                     (barItem as! UIControl).addTarget(self, action: #selector(leftBarItemTouchUpInside(_:)), for: UIControl.Event.touchUpInside)
                 }
             }
@@ -74,7 +74,7 @@ public class MNNavigationBar: UIView {
                 barItem = view
             } else {
                 barItem = UIControl()
-                barItem.size_mn = MNNavigationBar.ItemSize
+                barItem.size_mn = CGSize(width: MNNavigationBar.ItemSize, height: MNNavigationBar.ItemSize)
                 (barItem as! UIControl).addTarget(self, action: #selector(rightBarItemTouchUpInside(_:)), for: UIControl.Event.touchUpInside)
             }
             var y = (self.height_mn - UIApplication.StatusBarHeight - barItem.height_mn)/2.0
@@ -103,7 +103,7 @@ public class MNNavigationBar: UIView {
     // 底部分割线
     private var shadowView: UIView = {
         let shadowView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: MN_SEPARATOR_HEIGHT))
-        shadowView.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        shadowView.backgroundColor = UIColor(red: 192.0/255.0, green: 192.0/255.0, blue: 192.0/255.0, alpha: 1.0)
         return shadowView
     }()
     // 是否添加毛玻璃效果
@@ -146,7 +146,7 @@ public class MNNavigationBar: UIView {
     // 返回按钮颜色
     var backColor: UIColor? {
         set (newValue) {
-            self.leftItemImage = UIImage.icon(unicode: MNIcon.Name.back, color: newValue, pix: MNNavigationBar.ItemSize.width)
+            self.leftItemImage = UIImage.icon(unicode: MNIcon.Name.back, color: newValue, pix: MNNavigationBar.ItemSize)
         }
         get { nil }
     }

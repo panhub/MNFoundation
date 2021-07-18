@@ -25,6 +25,7 @@
 		3BA32E0C269EE0C70042460D /* UINavigationBar+MNHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA32E0B269EE0C70042460D /* UINavigationBar+MNHelper.swift */; };
 		3BA32E0E269EE2100042460D /* UITabBar+MNHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA32E0D269EE2100042460D /* UITabBar+MNHelper.swift */; };
 		3BA32E11269EE9660042460D /* MNSwizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA32E10269EE9660042460D /* MNSwizzle.swift */; };
+		3BB7897226A42D910048C4AD /* MNEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB7897126A42D910048C4AD /* MNEmptyView.swift */; };
 		3BCB13EE26A311CA00A10CFF /* CALayer+MNHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB13ED26A311CA00A10CFF /* CALayer+MNHelper.swift */; };
 		3BDCF288269E726F00587302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCF287269E726F00587302 /* AppDelegate.swift */; };
 		3BDCF28C269E726F00587302 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCF28B269E726F00587302 /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		3BA32E0B269EE0C70042460D /* UINavigationBar+MNHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+MNHelper.swift"; sourceTree = "<group>"; };
 		3BA32E0D269EE2100042460D /* UITabBar+MNHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+MNHelper.swift"; sourceTree = "<group>"; };
 		3BA32E10269EE9660042460D /* MNSwizzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNSwizzle.swift; sourceTree = "<group>"; };
+		3BB7897126A42D910048C4AD /* MNEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNEmptyView.swift; sourceTree = "<group>"; };
 		3BCB13ED26A311CA00A10CFF /* CALayer+MNHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+MNHelper.swift"; sourceTree = "<group>"; };
 		3BDCF284269E726F00587302 /* MNFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BDCF287269E726F00587302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		3BDCF2AC269E924100587302 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				3BB7897126A42D910048C4AD /* MNEmptyView.swift */,
 				3BDCF2AE269E92E700587302 /* MNNavigationTitleView.swift */,
 				3BDCF2B0269E951100587302 /* MNNavigationBar.swift */,
 			);
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BA32E06269ECDBB0042460D /* MNConst.swift in Sources */,
+				3BB7897226A42D910048C4AD /* MNEmptyView.swift in Sources */,
 				3BA32E00269EC7C10042460D /* UIView+MNLayout.swift in Sources */,
 				3B80668026A3568900F69384 /* MNBaseViewController.swift in Sources */,
 				3BA32E11269EE9660042460D /* MNSwizzle.swift in Sources */,

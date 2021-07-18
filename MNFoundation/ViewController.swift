@@ -21,5 +21,11 @@ class ViewController: MNExtendViewController {
         imageView.image = UIImage.icon(unicode: MNIcon.Name.close, color: UIColor.red, pix: 100.0)
         contentView.addSubview(imageView)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        showEmpty(needs: true, UIImage(named: "LaunchImage"), "提示嘻嘻系信息", "刷新", .reload)
+    }
 }
 
