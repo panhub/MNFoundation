@@ -68,19 +68,15 @@ public class MNURLRequestSerializer: NSObject {
     }
     
     // url编码
-    public func query(_ url: String) -> String? {
-        
+    private func query(_ url: String) -> String? {
         // 链接编码
         var string: String? = url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
         guard let _ = string else { return nil }
-        
         // 参数编码
         guard let query = MNQueryExtract(query) else { return string }
-        
         // 拼接参数
         string?.append((query.contains("?") ? "&" : "?"))
         string?.append(query)
-        
         return string
     }
     
