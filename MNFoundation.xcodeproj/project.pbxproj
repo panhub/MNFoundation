@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B030061269FFC2900E527F0 /* MNIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B030060269FFC2900E527F0 /* MNIcon.swift */; };
 		3B03006726A029DB00E527F0 /* String+MNHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B03006626A029DB00E527F0 /* String+MNHelper.swift */; };
+		3B2FD7D726A51E210093EEF5 /* MNURLRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2FD7D626A51E210093EEF5 /* MNURLRequestSerializer.swift */; };
 		3B32637A269FD71900DBF540 /* UIImage+MNIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B326379269FD71900DBF540 /* UIImage+MNIcon.swift */; };
 		3B32637D269FD8BE00DBF540 /* MNKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B32637C269FD8BE00DBF540 /* MNKit.bundle */; };
 		3B326380269FD96D00DBF540 /* Bundle+MNHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B32637F269FD96D00DBF540 /* Bundle+MNHelper.swift */; };
@@ -27,6 +28,8 @@
 		3BA32E11269EE9660042460D /* MNSwizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA32E10269EE9660042460D /* MNSwizzle.swift */; };
 		3BB7897226A42D910048C4AD /* MNEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB7897126A42D910048C4AD /* MNEmptyView.swift */; };
 		3BCB13EE26A311CA00A10CFF /* CALayer+MNHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB13ED26A311CA00A10CFF /* CALayer+MNHelper.swift */; };
+		3BD6713626A55776008DE78E /* MNNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6713526A55776008DE78E /* MNNetworking.swift */; };
+		3BD6713826A56B06008DE78E /* MNURLQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6713726A56B06008DE78E /* MNURLQuery.swift */; };
 		3BDCF288269E726F00587302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCF287269E726F00587302 /* AppDelegate.swift */; };
 		3BDCF28C269E726F00587302 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCF28B269E726F00587302 /* ViewController.swift */; };
 		3BDCF291269E727000587302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BDCF290269E727000587302 /* Assets.xcassets */; };
@@ -40,6 +43,7 @@
 /* Begin PBXFileReference section */
 		3B030060269FFC2900E527F0 /* MNIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNIcon.swift; sourceTree = "<group>"; };
 		3B03006626A029DB00E527F0 /* String+MNHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MNHelper.swift"; sourceTree = "<group>"; };
+		3B2FD7D626A51E210093EEF5 /* MNURLRequestSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNURLRequestSerializer.swift; sourceTree = "<group>"; };
 		3B326379269FD71900DBF540 /* UIImage+MNIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+MNIcon.swift"; sourceTree = "<group>"; };
 		3B32637C269FD8BE00DBF540 /* MNKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MNKit.bundle; sourceTree = "<group>"; };
 		3B32637F269FD96D00DBF540 /* Bundle+MNHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+MNHelper.swift"; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		3BA32E10269EE9660042460D /* MNSwizzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNSwizzle.swift; sourceTree = "<group>"; };
 		3BB7897126A42D910048C4AD /* MNEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNEmptyView.swift; sourceTree = "<group>"; };
 		3BCB13ED26A311CA00A10CFF /* CALayer+MNHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+MNHelper.swift"; sourceTree = "<group>"; };
+		3BD6713526A55776008DE78E /* MNNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNNetworking.swift; sourceTree = "<group>"; };
+		3BD6713726A56B06008DE78E /* MNURLQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNURLQuery.swift; sourceTree = "<group>"; };
 		3BDCF284269E726F00587302 /* MNFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BDCF287269E726F00587302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BDCF28B269E726F00587302 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +87,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B2FD7D526A51D450093EEF5 /* MNNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				3BD6713526A55776008DE78E /* MNNetworking.swift */,
+				3B2FD7D626A51E210093EEF5 /* MNURLRequestSerializer.swift */,
+				3BD6713726A56B06008DE78E /* MNURLQuery.swift */,
+			);
+			path = MNNetworking;
+			sourceTree = "<group>";
+		};
 		3B32637B269FD87600DBF540 /* resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,8 +140,9 @@
 		3BA32E0F269EE94F0042460D /* units */ = {
 			isa = PBXGroup;
 			children = (
-				3BA32E10269EE9660042460D /* MNSwizzle.swift */,
 				3B030060269FFC2900E527F0 /* MNIcon.swift */,
+				3BA32E10269EE9660042460D /* MNSwizzle.swift */,
+				3B2FD7D526A51D450093EEF5 /* MNNetworking */,
 			);
 			path = units;
 			sourceTree = "<group>";
@@ -289,6 +306,7 @@
 				3B80668026A3568900F69384 /* MNBaseViewController.swift in Sources */,
 				3BA32E11269EE9660042460D /* MNSwizzle.swift in Sources */,
 				3BA32E04269EC9E90042460D /* UIView+MNHelper.swift in Sources */,
+				3BD6713626A55776008DE78E /* MNNetworking.swift in Sources */,
 				3BA32E0C269EE0C70042460D /* UINavigationBar+MNHelper.swift in Sources */,
 				3BDCF2B1269E951100587302 /* MNNavigationBar.swift in Sources */,
 				3BDCF2AF269E92E700587302 /* MNNavigationTitleView.swift in Sources */,
@@ -297,10 +315,12 @@
 				3BDCF28C269E726F00587302 /* ViewController.swift in Sources */,
 				3B3723E826A36ADE00EDA009 /* UIViewController+MNInterface.swift in Sources */,
 				3BA32E0E269EE2100042460D /* UITabBar+MNHelper.swift in Sources */,
+				3BD6713826A56B06008DE78E /* MNURLQuery.swift in Sources */,
 				3BA32E02269EC7EA0042460D /* UIVisualEffectView+MNHelper.swift in Sources */,
 				3BDCF2A8269E8C8000587302 /* Double+MNHelper.swift in Sources */,
 				3BDCF288269E726F00587302 /* AppDelegate.swift in Sources */,
 				3B326382269FDD9100DBF540 /* MNKit.swift in Sources */,
+				3B2FD7D726A51E210093EEF5 /* MNURLRequestSerializer.swift in Sources */,
 				3B030061269FFC2900E527F0 /* MNIcon.swift in Sources */,
 				3BDCF2A9269E8C8000587302 /* CGFloat+MNHelper.swift in Sources */,
 				3B326380269FD96D00DBF540 /* Bundle+MNHelper.swift in Sources */,
