@@ -10,12 +10,14 @@ import Foundation
 
 public class MNURLRequestSerializer: NSObject {
     /** 是否允许使用蜂窝网络*/
-    public var isAllowsCellularAccess: Bool = true
+    public var allowsCellularAccess: Bool = true
     /** 超时时长*/
     public var timeoutInterval: TimeInterval = 10.0
     /** 字符串编码格式*/
     public var stringEncoding: String.Encoding = .utf8
-    /**数据体 支持 String, Data, Dictionary, Array*/
+    /** 上传内容的分割标记*/
+    public var boundary: String = MNNet.BoundaryName
+    /**数据体*/
     public var body: Codable?
     /**请求地址参数拼接 支持 String, [String: Any]*/
     public var query: AnyObject?
@@ -40,8 +42,29 @@ public class MNURLRequestSerializer: NSObject {
         var request = URLRequest(url: URL)
         request.cachePolicy = cachePolicy
         request.httpMethod = method.rawValue
-        
-        return nil
+        request.timeoutInterval = timeoutInterval
+        request.allowsCellularAccess = allowsCellularAccess
+        request.allHTTPHeaderFields = headerFields
+        // 添加认证信息
+        if let header = authFields, header.count > 0 {
+            if let (username, password) = header.first {
+                if let data = (username + ":" + password).data(using: stringEncoding) {
+                    request.setValue(data.base64EncodedString(), forHTTPHeaderField: "Authorization")
+                }
+            }
+        }
+        // 添加数据体
+        if method == .post, let body = body {
+            let data: Data? = body is Data ? (body as! Data) : MNQueryExtract(body as AnyObject)?.data(using: stringEncoding)
+            if let httpBody = data, httpBody.count > 0 {
+                request.httpBody = httpBody
+                if request.value(forHTTPHeaderField: "Content-Type") == nil {
+                    request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+                }
+            } else { throw MNNet.NetError.bodyError }
+            //
+        }
+        return request
     }
     
     // url编码
@@ -60,6 +83,7 @@ public class MNURLRequestSerializer: NSObject {
         
         return string
     }
+    
 }
 
 

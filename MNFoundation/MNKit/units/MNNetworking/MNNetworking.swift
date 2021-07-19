@@ -14,6 +14,9 @@ public class MNNet: NSObject {
 
 public extension MNNet {
     
+    /**上传边界标记*/
+    static let BoundaryName: String = "mn.upload.boundary.name"
+    
     /**请求方法*/
     enum RequestMethod: String {
         case get = "GET"
@@ -27,7 +30,7 @@ public extension MNNet {
         case unknown
         case badUrl
         case badMethod
-        case dataError
+        case bodyError
         case message(String)
         
         var description: String {
@@ -38,7 +41,7 @@ public extension MNNet {
                 return "链接错误"
             case .badMethod:
                 return "请求方法错误"
-            case .dataError:
+            case .bodyError:
                 return "发生未知错误"
             case .message(let msg):
                 return msg
