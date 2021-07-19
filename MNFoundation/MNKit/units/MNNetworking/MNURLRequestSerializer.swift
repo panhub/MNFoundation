@@ -55,7 +55,7 @@ public class MNURLRequestSerializer: NSObject {
         }
         // 添加数据体
         if method == .post, let body = body {
-            let data: Data? = body is Data ? (body as! Data) : MNQueryExtract(body as AnyObject)?.data(using: stringEncoding)
+            let data: Data? = body is Data ? (body as? Data) : MNQueryExtract(body as AnyObject)?.data(using: stringEncoding)
             if let httpBody = data, httpBody.count > 0 {
                 request.httpBody = httpBody
                 if request.value(forHTTPHeaderField: "Content-Type") == nil {
