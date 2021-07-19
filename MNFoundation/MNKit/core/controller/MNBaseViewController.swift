@@ -76,7 +76,7 @@ class MNBaseViewController: UIViewController, UIViewControllerTransitioningDeleg
     }
     
     func createView() -> Void {
-        var frame = self.view.bounds
+        var frame = view.bounds
         if edges.contains(.bottom) {
             frame = frame.inset(by: UIEdgeInsets(top: 0.0, left: 0.0, bottom: MN_TAB_BAR_HEIGHT, right: 0.0))
         }

@@ -8,22 +8,19 @@
 import UIKit
 
 class MNExtendViewController: MNBaseViewController {
-    // 导航条高度
+    // 定制导航条高度
     var navigationBarHeight: CGFloat { MN_NAV_BAR_HEIGHT }
     // 导航条
     fileprivate var mn_navigationBar: MNNavigationBar!
     // 外界获取导航条
     override var navigationBar: MNNavigationBar! { mn_navigationBar }
     
-    // 对内容视图约束
+    // 初始化时对内容视图约束
     override func initialized() {
         super.initialized()
-        if isChildViewController() {
-            edges = .none
-        } else if isRootViewController() {
-            edges = .all
-        } else {
-            edges = .top
+        if isChildViewController() == false {
+            edges.remove(.none)
+            edges = edges.union(.top)
         }
     }
     
@@ -38,8 +35,10 @@ class MNExtendViewController: MNBaseViewController {
     
     override func createView() {
         super.createView()
-        if edges.contains(.top) {
-            contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: self.navigationBarHeight + MN_STATUS_BAR_HEIGHT, left: 0.0, bottom: 0.0, right: 0.0))
+        if isChildViewController() == false {
+            if edges.contains(.top) {
+                contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: navigationBarHeight + MN_STATUS_BAR_HEIGHT, left: 0.0, bottom: 0.0, right: 0.0))
+            }
             let navigationBar = MNNavigationBar(frame: CGRect(x: 0.0, y: 0.0, width: view.width_mn, height: self.navigationBarHeight + MN_STATUS_BAR_HEIGHT))
             navigationBar.delegate = self
             navigationBar.createItems()
@@ -82,7 +81,13 @@ extension MNExtendViewController: MNNavigationBarDelegate {
     func finishCreateBarItem(_ navigationBar: MNNavigationBar) {}
     func rightBarItemTouchUpInside(_ rightBarItem: UIView) {}
     func leftBarItemTouchUpInside(_ leftBarItem: UIView) {
-        self.navigationController?.popViewController(animated: true)
+        if let _ = presentingViewController {
+            dismiss(animated: UIApplication.shared.applicationState == .active, completion: nil)
+        } else if let nav = navigationController {
+            if nav.viewControllers.count > 1  {
+                nav.popViewController(animated: UIApplication.shared.applicationState == .active)
+            }
+        }
     }
 }
 
